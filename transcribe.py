@@ -9,7 +9,6 @@ class TranscribeAudio:
 
     def transcribe(self):
         whisper_model = whisper.load_model("base")
-
         input_folder = "wav"
         output_folder = "txt"
 
@@ -20,9 +19,9 @@ class TranscribeAudio:
                 # Skip files that have already been transcribed
                 if os.path.exists(txt_path):
                     continue
-                
+                # Transcribe the file
                 result = whisper_model.transcribe(wav_path, language="en")
-
+                # Write text file
                 with open(txt_path, "w", encoding="utf-8") as output_file:
                     output_file.write(result["text"])
 

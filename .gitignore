@@ -1,0 +1,5 @@
+__pycache__/record_audio.cpython-314.pyc
+__pycache__/compare.cpython-314.pyc
+__pycache__/transcribe.cpython-314.pyc
+*.txt
+*.wav
